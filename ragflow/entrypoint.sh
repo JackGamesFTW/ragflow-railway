@@ -116,9 +116,12 @@ done
 # -----------------------------------------------------------------------------
 # Replace env variables in the service_conf.yaml file
 # -----------------------------------------------------------------------------
-CONF_DIR="/conf"
+CONF_DIR="/etc/ragflow"
 TEMPLATE_FILE="${CONF_DIR}/service_conf.yaml.template"
 CONF_FILE="${CONF_DIR}/service_conf.yaml"
+
+# Ensure the conf directory exists
+mkdir -p "${CONF_DIR}"
 
 rm -f "${CONF_FILE}"
 while IFS= read -r line || [[ -n "$line" ]]; do
