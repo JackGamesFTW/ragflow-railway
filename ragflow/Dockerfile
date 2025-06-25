@@ -26,8 +26,8 @@ ARG REDIS_PASSWORD
 ARG REDIS_HOST
 ARG REDIS_PORT
 
-COPY ./entrypoint.sh /ragflow/entrypoint.sh
-COPY ./service_conf.yaml.template /ragflow/conf/service_conf.yaml.template
+COPY ./entrypoint.sh ./entrypoint.sh
+COPY ./service_conf.yaml.template ./conf/service_conf.yaml.template
 COPY ./nginx/ragflow.conf /etc/nginx/conf.d/ragflow.conf
 COPY ./nginx/proxy.conf /etc/nginx/proxy.conf
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
