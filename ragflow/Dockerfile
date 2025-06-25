@@ -32,6 +32,6 @@ COPY ./nginx/ragflow.conf /etc/nginx/conf.d/ragflow.conf
 COPY ./nginx/proxy.conf /etc/nginx/proxy.conf
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
-RUN chmod +x /usr/local/bin/ragflow-entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
 
-ENTRYPOINT ["/usr/local/bin/ragflow-entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
