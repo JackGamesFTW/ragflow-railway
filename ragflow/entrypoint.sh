@@ -161,6 +161,12 @@ function start_mcp_server() {
 # -----------------------------------------------------------------------------
 
 if [[ "${ENABLE_WEBSERVER}" -eq 1 ]]; then
+    # Set up basic authentication if enabled
+    if [ -f /ragflow/setup-auth.sh ]; then
+        echo "Running basic auth setup..."
+        /ragflow/setup-auth.sh
+    fi
+
     echo "Starting nginx..."
     /usr/sbin/nginx
 
